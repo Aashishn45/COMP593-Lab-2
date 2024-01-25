@@ -54,7 +54,7 @@ def add_pizza_toppings(about_me, toppings):
 def print_pizza_toppings(about_me):
      print('\nMy favorite pizza toppings are:')
      for topping in about_me["pizza_toppings"]:
-      print(f'-{topping}') 
+      print(f'- {topping}') 
      return
 
 
