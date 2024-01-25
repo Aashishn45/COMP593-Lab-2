@@ -42,12 +42,9 @@ def print_student_name_and_id(about_me):
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
 def add_pizza_toppings(about_me, toppings):
-    pizza = about_me['pizza_toppings']
-    pizza.extend(toppings)
-    pizza.sort()
-    pizza = [topping.lower() for topping in pizza]
-    about_me["pizza_toppings"] = pizza
-
+    about_me['pizza_toppings'].extend(toppings)
+    about_me["pizza_toppings"] = [topping.lower() for topping in about_me["pizza_toppings"]]
+    about_me["pizza_toppings"].sort()
     return
 
 
