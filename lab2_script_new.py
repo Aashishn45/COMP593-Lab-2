@@ -32,6 +32,8 @@ def main():
 
     print_movie_genres(about_me)
 
+    print_movie_titles(about_me["movies"])
+
 # TODO: Step 4 - Function that prints student name and ID	
 def print_student_name_and_id(about_me):
     full_name = about_me["full_name"]
@@ -58,20 +60,16 @@ def print_pizza_toppings(about_me):
 
 # TODO: Step 7 - Function that prints comma-separated list of movie genres
 def print_movie_genres(about_me):
-    list = []
-    for movie in about_me['movies']:
-     if isinstance(movie, dict):  
-        list.append(movie['genre'])
-
-    print(f"\nI like to watch {list[0]}, {list[1]}, and {list[2]} movies.")
-
+    gen = [mov["genre"] for mov in about_me["movies"]]
+    mov_gen = ', '.join(gen)
+    print(f'\nI like to watch {mov_gen} movies.')
     return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
 def print_movie_titles(movie_list):
-
-
-
+    titl = [heading["title"].title() for heading in movie_list]
+    hed = ", ".join(titl)
+    print(f'\nSome of my favourite movies are {hed}!')
     return
 
     
